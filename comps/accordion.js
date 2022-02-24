@@ -28,8 +28,7 @@ template_accord.innerHTML = `
     #menu > .arrow {
         position:absolute;
         right: 20px;
-        top:30%;
-        width:30px;
+        width:25px;
     }
 
 
@@ -54,7 +53,7 @@ template_accord.innerHTML = `
 
     #answer > .answer {
         margin-top: 25px;
-        padding:15px;
+        padding:20px;
     }
 
     #container.active #answer {
