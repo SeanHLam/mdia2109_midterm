@@ -11,7 +11,7 @@ class TheStatItem extends HTMLElement {
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
         super(); //pass on the HTMLElement super powers!
-        this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
+        this.attachShadow({mode:"open"})
 
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
