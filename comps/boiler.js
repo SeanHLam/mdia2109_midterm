@@ -19,6 +19,7 @@ class TheComp extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_comp.content.cloneNode(true)); //use the template to make a clone
+        
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
