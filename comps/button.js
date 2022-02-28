@@ -51,11 +51,11 @@ class TheButton extends HTMLElement {
         }
 
         if(this.getAttribute("scroll")){
-            this.shadowRoot.querySelector("#button").onclick = () => this.scrollTo()
+            this.shadowRoot.querySelector("#cont").onclick = () => this.scrollTo()
         }
         
         if(this.getAttribute("overlay")){
-            this.shadowRoot.querySelector("#button").onclick = () => this.overlay()
+            this.shadowRoot.querySelector("#cont").onclick = () => this.overlay()
         }
 
     }
@@ -67,7 +67,10 @@ class TheButton extends HTMLElement {
     }
 
     overlay(){
-        document.querySelector("#overlay").style.display(block);
+        
+        document.querySelector("#overlay").style.display = "block";
+        document.querySelector("#checkCont").style.display = "block";
+        
     }
 
 }

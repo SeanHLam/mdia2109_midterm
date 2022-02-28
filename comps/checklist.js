@@ -5,6 +5,7 @@ var template_check = document.createElement("template"); //<template> </template
 template_check.innerHTML = `
 <style>
 #cont{
+
     display: flex;
     flex-direction: row;
     margin: 2em;
@@ -44,7 +45,6 @@ template_check.innerHTML = `
 </style>
     
 <div id="cont">
-    
     <div id="box">
         <div id="check"> 
         </div>
@@ -73,7 +73,10 @@ class TheCheck extends HTMLElement {
         if(this.getAttribute("check_text")){
             this.shadowRoot.querySelector("#checkText").innerText = this.getAttribute("check_text");
         }
+       
         this.shadowRoot.querySelector("#box").onclick = () => this.checkMark()
+       
+        document.querySelector("#overlay").onclick = () => this.closeOverlay()
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -84,12 +87,18 @@ class TheCheck extends HTMLElement {
         if(checkSetting === "block"){
    
             this.shadowRoot.querySelector("#check").style.display = "none"
+            
         }
 
         else{
   
             this.shadowRoot.querySelector("#check").style.display = "block"
         }
+    }
+
+    closeOverlay(){
+        document.querySelector("#overlay").style.display = "none";
+        document.querySelector("#checkCont").style.display = "none";
     }
 }
 
