@@ -1,12 +1,24 @@
 //MUST HAVE - CREATE A TEMPLATE TAG
-var template_comp = document.createElement("template"); //<template> </template> RULE
+var template_para = document.createElement("template"); //<template> </template> RULE
 
 //To-do - CREATE THE UI HERE!
-template_comp.innerHTML = `
+template_para.innerHTML = `
+
+<style>
+#para{
+    font-size: 15px;
+    color: #382D72;
+    margin: 2em;    
+}
+
+
+</style>
+
+<div id="para">text</div>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
-class TheComp extends HTMLElement {
+class ThePara extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
     constructor(){
@@ -18,12 +30,14 @@ class TheComp extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
-        this.shadowRoot.appendChild(template_comp.content.cloneNode(true)); //use the template to make a clone
-        
+        this.shadowRoot.appendChild(template_para.content.cloneNode(true)); //use the template to make a clone
+        if(this.getAttribute("para_text")){
+            this.shadowRoot.querySelector("#para").innerText = this.getAttribute("para_text");
+        }
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
 //MUST HAVE - define the tag for the custom elements
-customElements.define("the-comp", TheComp)
+customElements.define("the-para", ThePara)
