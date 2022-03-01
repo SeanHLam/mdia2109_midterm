@@ -25,9 +25,6 @@ body{
 #checkCont{
     display: none;
     position: fixed;
-
- 
-    margin:auto;
     background-color: #382D72;
     width: 21em; 
     padding: 1em 0 1em 0;
