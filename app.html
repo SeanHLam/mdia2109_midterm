@@ -4,26 +4,27 @@
   <head>
     <title>Dynamic Content Design Midterm</title>
     <script src="comps/button.js"></script>
-
     <script src="comps/checkbox.js"></script>
     <script src="comps/accordion.js"></script>
+    <script src="comps/image.js"></script>
     <link rel="stylesheet" href="CSS/main.css">
 
   </head>
 
   <body>
     <the-button overlay="yes" butt_text="hi"></the-button>
+
+    <the-button scroll="yes" butt_text="scroll"></the-button>
     
-    <div id="overlay">  
-      
-    </div>
+    <div id="overlay"></div>
     <div id="checkCont">
       <the-check check_text="Does the piece of media stereotype those with mental health issues?"></the-check>
       <the-check></the-check>
       <the-check></the-check>
       <the-check></the-check>
     </div>
-    <the-accord></the-accord>
+    <the-accord id="graphic"></the-accord>
+    <the-image></the-image>  
   </body>
 </html>
 
