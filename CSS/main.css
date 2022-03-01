@@ -1,4 +1,5 @@
 
+
 #overlay{
     display: none;
     height: 100%;
@@ -15,7 +16,7 @@
 
 #checkCont{
     display: none;
-    position: relative;
+    position: fixed;
     background-color: #382D72;
     width: 21em; 
     padding: 1em 0 1em 0;
