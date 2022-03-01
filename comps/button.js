@@ -18,6 +18,10 @@ template_button.innerHTML = `
     box-shadow: 0 3px 8px;
 }
 
+#cont:hover{
+    background-color: #382D72;
+}
+
 #text{
     font-size: 26px;
     color: #FFFFFF;
