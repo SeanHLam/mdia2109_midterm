@@ -31,15 +31,12 @@ class TheStatItem extends HTMLElement {
         this.shadowRoot.appendChild(template_statitem.content.cloneNode(true)); //use the template to make a clone
         
         }
-    }
+    
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    showSpeech() {
+    showSpeech(){
         document.getElementById('speech').style.display = "block";
      }
-
-
-    
 }
 
 //MUST HAVE - define the tag for the custom elements

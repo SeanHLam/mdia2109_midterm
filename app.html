@@ -9,6 +9,8 @@
   <script src="comps/image.js"></script>
   <script src="comps/heading.js"></script>
   <script src="comps/image.js"></script>
+  <script src="comps/speechBubble.js"></script>
+  <script src="comps/headIcon.js"></script>
   <link rel="stylesheet" href="CSS/main.css">
 
   <!--FONTS-->
@@ -34,48 +36,45 @@
 
   <!--Page 2-->
   <div class="block"></div>
-  <the-image></the-image>
+  <the-image id="hugImage"></the-image>
   <the-heading head_text="No matter what you are, we can all struggle with our mental health"></the-heading>
 
   <!--Page 3-->
-
+  <the-statitem></the-statitem>
+  <the-icon></the-icon>
 
   <!--Page 4-->
   <div class="block"></div>
-  <the-button overlay="yes" butt_text="Try using STOP"></the-button>
+  <the-button overlay="overlay" butt_text="Try using STOP"></the-button>
   <div id="overlay"></div>
   <div id="checkCont">
     <the-check check_text="Does the piece of media stereotype those with mental health issues?"></the-check>
     <the-check check_text="Does the piece of media trivialize those with mental health issues?"></the-check>
-    <the-check check_text="Does the piece of media offend those with mental health issues? "></the-check>
+    <the-check check_text="Does the piece of media offend those with mental health issues?"></the-check>
     <the-check check_text="Does the piece of media patronize those with mental health issues?"></the-check>
   </div>
 
 
   <!--Accordion Menu-->
   <the-accord 
-  id="graphic" 
   img="" 
   question="Subtance use & mental health" 
   answer="people dealing with a mental illness are twice as likely to have a substance use problem."
   ></the-accord>
 
   <the-accord 
-  id="graphic" 
   img="imgs/accordionIcon/002-mental-health.png"
   question="Being physically healthy" 
   answer="Physical and mental health are linked to each other. People who suffer from physical ailments are moke likely to deal with mental issues."
   ></the-accord>
 
   <the-accord 
-  id="graphic" 
   img="imgs/accordionIcon/003-mental-health.png" 
   question="Homelessness & mental health" 
   answer="23% - 67% of homeless people in Canadian cities have reported dealing mental illness.
   "></the-accord>
 
   <the-accord 
-  id="graphic" 
   img="imgs/accordionIcon/004-solution.png" 
   question="The largest demographic" 
   answer="If you're in the age range of 15 - 24, you are more likely to deal with a mental illness.

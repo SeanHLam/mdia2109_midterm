@@ -67,15 +67,13 @@ class TheButton extends HTMLElement {
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 
     scrollTo(){
-        document.querySelector("#graphic").scrollIntoView({behavior: "smooth"});
+        document.querySelector("#hugImage").scrollIntoView({behavior: "smooth"});
       
     }
 
     overlay(){
-        
         document.querySelector("#overlay").style.display = "block";
         document.querySelector("#checkCont").style.display = "block";
-        
     }
 
 }
