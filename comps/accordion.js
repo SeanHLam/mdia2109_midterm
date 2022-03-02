@@ -9,11 +9,12 @@ template_accord.innerHTML = `
     #container {
         position:relative;
         margin-bottom: 40px;
+        width: 24em;
     }
 
     #menu {
         position:relative;
-        font-size: 15px;
+        font-size: 20px;
         color:white;
         cursor:pointer;
         background-color: #96A7CD;
@@ -41,6 +42,7 @@ template_accord.innerHTML = `
     #answer {
         position:relative;
         font-size: 15px;
+        color: white;
         text-align:justify;
         overflow:hidden;
         transition:0.5s;

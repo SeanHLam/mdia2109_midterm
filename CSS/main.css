@@ -3,10 +3,16 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    font-family: 'Patrick Hand', cursive;
 }
 
 .block{
     height: 500px;
+}
+
+the-heading {
+    text-align: center;
+    padding: 1em;
 }
 
 #overlay{

@@ -40,7 +40,10 @@ template_check.innerHTML = `
 #checkText{
     font-size: 15px;
     color: white;
-    margin-left: .5em;
+    margin-left: 1.5em;
+    display: flex;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
 }
 </style>
     
