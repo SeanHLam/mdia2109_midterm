@@ -70,7 +70,7 @@ template_accord.innerHTML = `
 </style>
 
 <div id="container">
-    <div id="menu"> <img class="icons" src="https://cdn-icons-png.flaticon.com/512/3203/3203856.png"> <div class="question"> Question </div> <img class="arrow" src="https://img.icons8.com/small/32/ffffff/right.png"> </div>
+    <div id="menu"> <img class="icons" src="imgs/accordionIcon/001-mental-health.png"> <div class="question"> Question </div> <img class="arrow" src="https://img.icons8.com/small/32/ffffff/right.png"> </div>
     <div id="answer"><div class="answer">Answer </div> </div>
 </div>
 
