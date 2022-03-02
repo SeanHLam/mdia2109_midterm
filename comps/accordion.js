@@ -9,6 +9,7 @@ template_accord.innerHTML = `
     #container {
         position:relative;
         margin-bottom: 40px;
+        width: 20em;
     }
 
     #menu {
@@ -23,6 +24,7 @@ template_accord.innerHTML = `
         align-items:center;
         z-index:5;
         transition: 0.5s;
+
     }
 
     #menu > .arrow {
@@ -34,14 +36,13 @@ template_accord.innerHTML = `
 
     .icons {
         width: 30px;
-        margin-right:0.5em;
+        margin-right:1em;
 
     }
 
     #answer {
         position:relative;
         font-size: 15px;
-        text-align:justify;
         overflow:hidden;
         transition:0.5s;
         background: #6F55A9;
@@ -49,8 +50,10 @@ template_accord.innerHTML = `
         border-bottom-right-radius:25px;
         border-bottom-left-radius:25px;
         margin-top: -25px;
+        padding-bottom: 25px;
+        color:white;
     }
-
+    
     #answer > .answer {
         margin-top: 25px;
         padding:20px;
@@ -68,8 +71,12 @@ template_accord.innerHTML = `
 </style>
 
 <div id="container">
-    <div id="menu"> <img class="icons" src="https://cdn-icons-png.flaticon.com/512/3203/3203856.png"> <div class="question"> Question </div> <img class="arrow" src="https://img.icons8.com/small/32/ffffff/right.png"> </div>
-    <div id="answer"><div class="answer">Answer </div> </div>
+    <div id="menu"> 
+        <img class="icons" src="https://cdn-icons-png.flaticon.com/512/3203/3203856.png"> 
+        <div class="question"> Question </div> 
+        <img class="arrow" src="https://img.icons8.com/small/32/ffffff/right.png">
+    </div>
+    <div id="answer"><div class="answer">Answer</div> </div>
 </div>
 
 
@@ -100,8 +107,8 @@ class TheAccord extends HTMLElement {
             this.shadowRoot.querySelector(".answer").innerText = this.getAttribute("answer");
         }
 
-        this.shadowRoot.querySelector("#menu").onclick = () => this.answerActive();
-        this.shadowRoot.querySelector("#answer").onclick = () => this.answerReclick();
+        this.shadowRoot.querySelector("#menu > .question").onclick = () => this.answerActive();
+        this.shadowRoot.querySelector("#menu > .arrow").onclick = () => this.answerDeActive();
         
     }
 
@@ -113,7 +120,7 @@ class TheAccord extends HTMLElement {
         this.shadowRoot.querySelector("#menu").style.backgroundColor = "#382D72";
     }
 
-    answerReclick(){
+    answerDeActive(){
         this.shadowRoot.querySelector("#answer").style.height = "0px";
         this.shadowRoot.querySelector("#menu > .arrow").src = "https://img.icons8.com/small/32/ffffff/right.png";
         this.shadowRoot.querySelector("#menu").style.backgroundColor = "#96A7CD"
@@ -123,5 +130,3 @@ class TheAccord extends HTMLElement {
 
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-accord", TheAccord)
-
-
