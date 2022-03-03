@@ -11,7 +11,7 @@ template_statitem.innerHTML = `
 </style>
 
 <div id='speech'>
-  <img src='./imgs/speech1.svg' />
+  <img id="image" src='./imgs/speech1.svg' />
 </div>
 `;
 
@@ -29,7 +29,18 @@ class TheStatItem extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback() {
         this.shadowRoot.appendChild(template_statitem.content.cloneNode(true)); //use the template to make a clone
-        
+          if(this.getAttribute("speech1")){
+            this.shadowRoot.querySelector("#image").src="./imgs/speech1.svg"
+            }
+          if(this.getAttribute("speech2")){
+              this.shadowRoot.querySelector("#image").src="./imgs/speech2.svg"
+            }
+          if(this.getAttribute("speech3")){
+              this.shadowRoot.querySelector("#image").src="./imgs/speech3.svg"
+            }
+          if(this.getAttribute("speech4")){
+              this.shadowRoot.querySelector("#image").src="./imgs/speech4.svg"
+            }
         }
     
 
