@@ -37,3 +37,24 @@ the-heading {
     border-radius: 20px;
     z-index: 7;
 }
+
+.statInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    }
+
+.statItem:nth-child(1) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.statItem:nth-child(2) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: center;
+    }
