@@ -23,13 +23,12 @@ class TheIcon extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_icon.content.cloneNode(true)); //use the template to make a clone
-        if(this.getAttribute('name')){
-        this.shadowRoot.querySelector('.head').innerText = this.getAttribute('name');
-        if (this.getAttribute(`name`) === `start`){
-            this.shadowRoot.querySelector(`.menu`).onclick = () => this.startGame();
-        } else {
-        this.shadowRoot.querySelector('.butto').onclick = () => 
-        document.querySelector('#speech').changeBG(`./imgs/${this.getAttribute('name')}.svg`);
+
+        if(this.getAttribute("image")){
+            this.shadowRoot.document.querySelector("#icon").style.image= (`./imgs/${this.getAttribute('name')}.svg`);
+          }
+
+       
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
@@ -37,5 +36,4 @@ class TheIcon extends HTMLElement {
 
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-icon", TheIcon)
-}
-}
+
