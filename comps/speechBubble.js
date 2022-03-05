@@ -5,6 +5,8 @@ var template_statitem = document.createElement("template"); //<template> </templ
 template_statitem.innerHTML = `
 <style>
   #speech {
+    display: 
+  
  
   }
 
@@ -46,7 +48,7 @@ class TheStatItem extends HTMLElement {
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     showSpeech(){
-        document.getElementById('speech').style.display = "block";
+        document.getElementById('hidden').style.display = "block";
      }
 }
 
