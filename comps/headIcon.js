@@ -6,12 +6,11 @@ template_icon.innerHTML = `
 <style>
   #icon {
     display: block;
- 
   }
-
 </style>
+
 <div id='icon'>
-  <img src='./imgs/head1.svg' />
+  <img id='image' src='./imgs/head1.svg'/>
 </div>
 
 `;
@@ -29,7 +28,7 @@ class TheIcon extends HTMLElement {
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback() {
-      this.shadowRoot.appendChild(template_statitem.content.cloneNode(true)); //use the template to make a clone
+      this.shadowRoot.appendChild(template_icon.content.cloneNode(true)); //use the template to make a clone
         if(this.getAttribute("head1")){
           this.shadowRoot.querySelector("#image").src="./imgs/head1.svg"
           }
@@ -43,15 +42,28 @@ class TheIcon extends HTMLElement {
             this.shadowRoot.querySelector("#image").src="./imgs/head4.svg"
           }
           
-          if(this.getAttribute("appear")){
-            this.shadowRoot.querySelector("#icon").onclick = () => this.appear()
-        }
+        
+        this.shadowRoot.querySelector("#icon").onclick = () => this.appear()
+    
       }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     appear(){
-      document.querySelector("#appear").style.display = "block";
-      document.querySelector("#hidden").style.display = "block";
+      if(this.getAttribute("head1")){
+        document.querySelector("#stat1").style.visibility = "visible";
+      }
+      if(this.getAttribute("head2")){
+        document.querySelector("#stat2").style.visibility = "visible";
+      }
+      if(this.getAttribute("head3")){
+        document.querySelector("#stat3").style.visibility = "visible";
+      }
+      if(this.getAttribute("head4")){
+        document.querySelector("#stat4").style.visibility = "visible";
+      }
+      
+      //document.querySelector(".statItem").style.display = "block";
+      
   }
 }
 

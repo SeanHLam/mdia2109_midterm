@@ -3,7 +3,7 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Patrick Hand';
 }
 
 .block{
@@ -58,3 +58,7 @@ the-heading {
     flex: 0 1 auto;
     align-self: center;
     }
+
+#stat1,#stat2,#stat3,#stat4{
+    visibility: hidden;
+}

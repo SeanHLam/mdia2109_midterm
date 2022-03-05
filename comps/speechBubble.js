@@ -4,17 +4,12 @@ var template_statitem = document.createElement("template"); //<template> </templ
 //To-do - CREATE THE UI HERE!
 template_statitem.innerHTML = `
 <style>
-  #speech {
-    display: 
-  
- 
-  }
 
 </style>
 
-<div id='speech'>
-  <img id="image" src='./imgs/speech1.svg' />
-</div>
+  <div id='speech'>
+    <img id="image" src='./imgs/speech1.svg' />
+  </div>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
