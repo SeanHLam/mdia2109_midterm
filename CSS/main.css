@@ -10,9 +10,24 @@ body{
     height: 500px;
 }
 
-the-heading {
+.personality {
+    margin-top: 18vh;
     text-align: center;
-    padding: 1em;
+    padding: .5em;
+}
+
+.personality > the-button {
+    display:flex;
+    justify-content: center;
+
+}
+
+the-para {
+    font-family: DM Sans;
+}
+
+the-image {
+    margin-top:10em;
 }
 
 #overlay{
