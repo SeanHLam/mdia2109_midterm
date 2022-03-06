@@ -1,7 +1,6 @@
 body{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     font-family: 'Patrick Hand';
     background: #F4E9EA;
