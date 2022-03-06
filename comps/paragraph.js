@@ -9,6 +9,7 @@ template_para.innerHTML = `
     font-size: 15px;
     color: #382D72;
     margin: .5em 2em .5em 2em;    
+    font-family: DM Sans;
 }
 
 

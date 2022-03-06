@@ -4,6 +4,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     font-family: 'Patrick Hand';
+    background: linear-gradient(#f4e9ea, white);
 }
 
 .block{
@@ -13,6 +14,10 @@ body{
 the-heading {
     text-align: center;
     padding: 1em;
+}
+
+the-paragraph {
+    font-family: 'DM Sans';
 }
 
 #overlay{
