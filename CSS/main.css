@@ -4,8 +4,8 @@ body{
     flex-wrap: wrap;
     align-items: center;
     font-family: 'Patrick Hand';
-    background-color: #f4e9ea;
-
+    background: #F4E9EA;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,246,246,1) 35%, rgba(244,233,234,1) 45%, rgba(244,233,234,1) 100%);
     /*background-image: linear-gradient(#f4e9ea, #C497BF 30%,);*/
 }
 
