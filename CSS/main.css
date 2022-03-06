@@ -20,22 +20,25 @@ the-heading {
     height: 100%;
     width: 100%;
     position: fixed; 
-    z-index: 6; 
+    z-index: 9; 
     left: 0;
     top: 0;
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0, 0.9); 
-    transition: 0.5s;
+    opacity: 0;
+    transition: all 0.5s;
 }
 
 #checkCont{
     display: none;
-    position: fixed;
+    position: relative;
     background-color: #382D72;
     width: 21em; 
     padding: 1em 0 1em 0;
     border-radius: 20px;
-    z-index: 7;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.5s;
 }
 
 .statInfo {
