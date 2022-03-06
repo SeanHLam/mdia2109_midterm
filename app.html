@@ -12,6 +12,7 @@
   <script src="comps/image.js"></script>
   <script src="comps/speechBubble.js"></script>
   <script src="comps/headIcon.js"></script>
+  <script src="comps/paragraph.js"></script>
   <link rel="stylesheet" href="CSS/main.css">
 
   <!--FONTS-->
@@ -38,34 +39,43 @@
   <div class="block"></div>
   <the-image id="hugImage"></the-image>
   <the-heading head_text="No matter what you are, we can all struggle with our mental health"></the-heading>
-  
+  <div class="block"></div>
 
   <!--Page 2-->
 
   <!--Stat1-->
-    <div class="statInfo">
-      <the-statitem id='stat1' class="statItem" speech1="yes"></the-statitem>
-      <the-icon class="statItem" head1="yes"></the-icon>
-    </div>
+  <the-para
+    para_text="Click on the head for more information">
+  </the-para>
+  <div class="statInfo">
+    <the-statitem id='stat1' class="statItem" speech1="yes"></the-statitem>
+    <the-icon class="statItem" head1="yes"></the-icon>
+  </div>
   <!--Stat2-->
-    <div class="statInfo">
-      <the-icon class="statItem" head2="yes"></the-icon>
-      <the-statitem id='stat2' class="statItem" speech2="yes"></the-statitem>
-    </div>
+  <div class="statInfo">
+    <the-icon class="statItem" head2="yes"></the-icon>
+    <the-statitem id='stat2' class="statItem" speech2="yes"></the-statitem>
+  </div>
   <!--Stat3-->
-    <div class="statInfo">
-      <the-statitem id='stat3' class="statItem" speech3="yes"></the-statitem>
-      <the-icon  class="statItem" head3="yes"></the-icon>
-    </div>
+  <div class="statInfo">
+    <the-statitem id='stat3' class="statItem" speech3="yes"></the-statitem>
+    <the-icon class="statItem" head3="yes"></the-icon>
+  </div>
   <!--Stat4-->
   <div class="statInfo">
     <the-icon class="statItem" head4="yes"></the-icon>
-    <the-statitem id='stat4'  class="statItem" speech4="yes"></the-statitem>
+    <the-statitem id='stat4' class="statItem" speech4="yes"></the-statitem>
   </div>
 
-  
 
-  <div class="block"></div>
+
+  
+  <the-heading margin="small" head_text="Media & mental health"></the-heading>
+  <the-para
+    para_text="Your view on mental health can be influenced by the media you consume. Bad depictions form stigmas about mental illnesses">
+  </the-para>
+  <the-para para_text="The STOP criteria lets you identify media that is harmful to the perception of mental health.">
+  </the-para>
   <the-button overlay="overlay" butt_text="Try using STOP"></the-button>
   <div id="overlay"></div>
   <div id="checkCont">
@@ -77,30 +87,21 @@
 
 
   <!--Accordion Menu-->
-  <the-accord 
-  img="" 
-  question="Subtance use & mental health" 
-  answer="people dealing with a mental illness are twice as likely to have a substance use problem."
-  ></the-accord>
+  <the-heading margin="small" head_text="In case you were curious..."></the-heading>
+  <the-accord img="" question="Subtance use & mental health"
+    answer="people dealing with a mental illness are twice as likely to have a substance use problem."></the-accord>
 
-  <the-accord 
-  img="imgs/accordionIcon/002-mental-health.png"
-  question="Being physically healthy" 
-  answer="Physical and mental health are linked to each other. People who suffer from physical ailments are moke likely to deal with mental issues."
-  ></the-accord>
+  <the-accord img="imgs/accordionIcon/002-mental-health.png" question="Being physically healthy"
+    answer="Physical and mental health are linked to each other. People who suffer from physical ailments are moke likely to deal with mental issues.">
+  </the-accord>
 
-  <the-accord 
-  img="imgs/accordionIcon/003-mental-health.png" 
-  question="Homelessness & mental health" 
-  answer="23% - 67% of homeless people in Canadian cities have reported dealing mental illness."
-  ></the-accord>
+  <the-accord img="imgs/accordionIcon/003-mental-health.png" question="Homelessness & mental health"
+    answer="23% - 67% of homeless people in Canadian cities have reported dealing mental illness."></the-accord>
 
-  <the-accord 
-  img="imgs/accordionIcon/004-solution.png" 
-  question="The largest demographic" 
-  answer="If you're in the age range of 15 - 24, you are more likely to deal with a mental illness."
-  ></the-accord>
+  <the-accord img="imgs/accordionIcon/004-solution.png" question="The largest demographic"
+    answer="If you're in the age range of 15 - 24, you are more likely to deal with a mental illness."></the-accord>
   <div class="block"></div>
 
 </body>
+
 </html>

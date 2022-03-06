@@ -72,8 +72,8 @@ class TheButton extends HTMLElement {
     }
 
     overlay(){
-        document.querySelector("#overlay").style.display = "block";
-        document.querySelector("#checkCont").style.display = "block";
+        document.querySelector("#overlay").style.cssText = `display:block; opacity:1; transition: all 1s;`
+        document.querySelector("#checkCont").style.cssText = `display:block; opacity:1; transition: all 1s;`
     }
 
 }

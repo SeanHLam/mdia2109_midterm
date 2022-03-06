@@ -14,7 +14,7 @@ template_heading.innerHTML = `
 
 </style>
 
-<div id="heading">poops</div>
+<div id="heading">test</div>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -35,6 +35,10 @@ class TheHeading extends HTMLElement {
         if(this.getAttribute("head_text")){
             this.shadowRoot.querySelector("#heading").innerText = this.getAttribute("head_text");
         }
+        if(this.getAttribute("margin")){
+            this.shadowRoot.querySelector("#heading").style.margin = "2em 2em 0 2em"
+        }
+        
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
