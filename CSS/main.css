@@ -4,7 +4,18 @@ body{
     flex-wrap: wrap;
     align-items: center;
     font-family: 'Patrick Hand';
-    background: linear-gradient(#f4e9ea, white);
+    background-color: #f4e9ea;
+
+    /*background-image: linear-gradient(#f4e9ea, #C497BF 30%,);*/
+}
+
+img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:-1;
+    opacity: 40%;
+    background-blend-mode: overlay;
 }
 
 .block{
