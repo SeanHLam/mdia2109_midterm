@@ -31,10 +31,13 @@
 <body>
 
   <!--Page 1-->
-  <the-heading head_text="What type of personality do you have?"></the-heading>
-  <the-button scroll="yes" butt_text="Introvert"></the-button>
-  <the-button scroll="yes" butt_text="Extrovert"></the-button>
-  <the-button scroll="yes" butt_text="Ambivert"></the-button>
+  <div class="personality_question">
+    <img class="background" src="imgs/background_image.png">
+    <the-heading head_text="What type of personality do you have?"></the-heading>
+    <the-button scroll="yes" butt_text="Introvert"></the-button>
+    <the-button scroll="yes" butt_text="Extrovert"></the-button>
+    <the-button scroll="yes" butt_text="Ambivert"></the-button>
+  </div>
 
 
   <!--Page 2-->
@@ -47,8 +50,7 @@
   <!--Page 3-->
 
   <!--Stat1-->
-  <the-para
-    para_text="Click on the head for more information">
+  <the-para para_text="Click on the head for more information">
   </the-para>
   <div class="statInfo">
     <the-statitem id='stat1' class="statItem" speech1="yes"></the-statitem>
@@ -71,9 +73,9 @@
   </div>
 
 
-<!--Page 4-->
+  <!--Page 4-->
 
-<!--Checklist-->
+  <!--Checklist-->
   <the-heading margin="small" head_text="Media & mental health"></the-heading>
   <the-para
     para_text="Your view on mental health can be influenced by the media you consume. Bad depictions form stigmas about mental illnesses">
@@ -88,6 +90,7 @@
     <the-check check_text="Does the piece of media offend those with mental health issues?"></the-check>
     <the-check check_text="Does the piece of media patronize those with mental health issues?"></the-check>
   </div>
+
 
   <!--Accordion Menu-->
   <the-heading margin="small" head_text="In case you were curious..."></the-heading>

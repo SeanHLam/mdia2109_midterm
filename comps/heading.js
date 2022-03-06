@@ -8,7 +8,7 @@ template_heading.innerHTML = `
 #heading{
     font-size: 26px;
     color: #382D72;
-    margin: 2em;    
+    margin: 1em;    
 }
 
 

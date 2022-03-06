@@ -6,10 +6,11 @@ template_accord.innerHTML = `
 
 <style>
 
-    #container {
+    #accordion {
         position:relative;
         margin-bottom: 40px;
-        width: 24em;
+        width: 20em;
+
     }
 
     #menu {
@@ -35,8 +36,8 @@ template_accord.innerHTML = `
 
 
     .icons {
-        width: 30px;
-        margin-right:1em;
+        width: 25px;
+        margin-right:0.5em;
 
     }
 
@@ -71,13 +72,12 @@ template_accord.innerHTML = `
     }
 
 </style>
-
-<div id="container">
-    <div id="menu"> <img class="icons" src="imgs/accordionIcon/001-mental-health.png"> <div class="question"> Question </div> <img class="arrow" src="https://img.icons8.com/small/32/ffffff/right.png"> </div>
-    <div id="answer"><div class="answer">Answer </div> </div>
+<div id="accordion">
+    <div id="container">
+        <div id="menu"> <img class="icons" src="imgs/accordionIcon/001-mental-health.png"> <div class="question"> Question </div> <img class="arrow" src="https://img.icons8.com/small/32/ffffff/right.png"> </div>
+        <div id="answer"><div class="answer">Answer </div> </div>
+    </div>
 </div>
-
-
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
