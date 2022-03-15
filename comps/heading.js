@@ -9,6 +9,32 @@ template_heading.innerHTML = `
     font-size: 26px;
     color: #382D72;
     margin: 1em;    
+    animation:popUp 2s ease-out, opacity 3s ease-out;
+}
+
+
+@keyframes popUp{
+    0% {
+        transform: translatey(25px);
+        }
+    1% {
+        transform: translatey(25px);
+        }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
