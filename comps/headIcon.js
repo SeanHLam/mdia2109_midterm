@@ -6,12 +6,37 @@ template_icon.innerHTML = `
 <style>
   #icon {
     display: block;
+    block-size: fit-content;
   }
+
+  #right-arrow{
+    height: 30px;
+    width: 35px;
+    background-color: transparent;
+    animation: 
+    MoveUpDown .8s ease infinite alternate;
+    position: relative;  
+    margin: 0.5em;
+    left: 1em;
+  }
+
+  @keyframes MoveUpDown {
+    0% {
+      bottom: 10px;
+    }
+    
+    40% {
+      bottom: 0px;
+    }
+    
+
 </style>
 
 <div id='icon'>
+  <div id="arrow"><img id="right-arrow" src="imgs/down-arrow.png"></div>
   <img id='image' src='./imgs/head1.svg'/>
 </div>
+
 
 `;
 
@@ -43,7 +68,10 @@ class TheIcon extends HTMLElement {
           }
           
         
+        
         this.shadowRoot.querySelector("#icon").onclick = () => this.appear()
+
+
     
       }
 
@@ -62,9 +90,29 @@ class TheIcon extends HTMLElement {
         document.querySelector("#stat4").style.visibility = "visible";
       }
       
-      //document.querySelector(".statItem").style.display = "block";
       
+      //document.querySelector(".statItem").style.display = "block";
+    
   }
+
+  disappear(){
+    if(this.getAttribute("head1")){
+      document.getElementById("#arrow1").style.visibility = "hidden";
+    }
+    if(this.getAttribute("head2")){
+      document.getElementById("#arrow2").style.visibility = "hidden";
+    }
+    if(this.getAttribute("head3")){
+      document.getElementById("#arrow3").style.visibility = "hidden";
+    }
+    if(this.getAttribute("head4")){
+      document.getElementById("#arrow4").style.visibility = "hidden";
+    }
+
+
+  }
+
+
 }
 
 //MUST HAVE - define the tag for the custom elements

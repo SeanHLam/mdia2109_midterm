@@ -97,8 +97,27 @@ the-image {
 }
 
 
+
 /* Page restriction */
 
 #page_2, #page_3, #page_4 {
     display:none;
 }
+
+/* the-arrow {
+    position: relative;
+    right: 2em;
+}
+
+the-arrow:nth-child(3) {
+    position: relative;
+    right: 16.5em;
+} */
+
+
+
+
+
+
+
+

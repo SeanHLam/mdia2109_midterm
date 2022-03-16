@@ -43,6 +43,7 @@ class TheStatItem extends HTMLElement {
     
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+
     showSpeech(){
         document.getElementById('hidden').style.display = "block";
      }
@@ -50,6 +51,11 @@ class TheStatItem extends HTMLElement {
      pageFour(){
        document.querySelector("#page_4").style.display= "block";
      }
+
+
+    // showSpeech(){
+    //     document.getElementById('hidden').style.display = "block";
+    //  }
 
 }
 
