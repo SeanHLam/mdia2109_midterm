@@ -6,11 +6,10 @@ template_accord.innerHTML = `
 
 <style>
 
-    #accordion {
+    #container {
         position:relative;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         width: 20em;
-
     }
 
     #menu {
@@ -20,12 +19,12 @@ template_accord.innerHTML = `
         cursor:pointer;
         background-color: #96A7CD;
         border-radius: 25px;
-        padding: 20px;
+        padding: 17px;
         display:flex;
+        flex-direction:row;
         align-items:center;
-        z-index:5;
+        z-index:100;
         transition: 0.5s;
-
     }
 
     #menu > .arrow {
@@ -45,39 +44,36 @@ template_accord.innerHTML = `
         position:relative;
         font-size: 15px;
         color: white;
-        text-align:justify;
         overflow:hidden;
-        transition:0.5s;
         background: #6F55A9;
-        height: 0;
+        display:none;
         border-bottom-right-radius:25px;
         border-bottom-left-radius:25px;
-        margin-top: -25px;
-        padding-bottom: 25px;
         color:white;
-    }
-    
-    #answer > .answer {
-        margin-top: 25px;
-        padding:20px;
+        padding: 20px;
+        z-index:0;
+        padding-top:33px;
+        top:-22px;
+        opacity: 0;
     }
 
-    #container.active #answer {
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        height: 0px;
-        padding: 20px;
-        padding-top: 40px;
-        margin-top: -25px;
+    #answer > .answer {
+        padding:20px;
+        margin-top:25px;
     }
 
 </style>
-<div id="accordion">
+
     <div id="container">
-        <div id="menu"> <img class="icons" src="imgs/accordionIcon/001-mental-health.png"> <div class="question"> Question </div> <img class="arrow" src="https://img.icons8.com/small/32/ffffff/right.png"> </div>
-        <div id="answer"><div class="answer">Answer </div> </div>
+        <div id="menu">
+            <img class="icons" src="imgs/accordionIcon/001-mental-health.png"> 
+            <div class="question"> Question </div> 
+            <img class="arrow" src="https://img.icons8.com/small/32/ffffff/right.png"> 
+         </div>
+        <div id="answer">
+            <div class="answer">Answer</div>
+            </div>
     </div>
-</div>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -102,26 +98,28 @@ class TheAccord extends HTMLElement {
             this.shadowRoot.querySelector(".question").innerText = this.getAttribute("question");
         }
         if(this.getAttribute("answer")){
-            this.shadowRoot.querySelector(".answer").innerText = this.getAttribute("answer");
-        }
+            this.shadowRoot.querySelector("#answer").innerText = this.getAttribute("answer");
+        }   
 
-        this.shadowRoot.querySelector("#menu > .question").onclick = () => this.answerActive();
-        this.shadowRoot.querySelector("#menu > .arrow").onclick = () => this.answerDeActive();
-        
-    }
+        this.shadowRoot.querySelector("#menu").onclick = () => this.clickToggle();
+
+    }  
 
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    answerActive(){
-        this.shadowRoot.querySelector("#answer").style.height = "120px";
-        this.shadowRoot.querySelector("#menu > .arrow").src = "https://img.icons8.com/small/32/ffffff/down.png";
-        this.shadowRoot.querySelector("#menu").style.backgroundColor = "#382D72";
-    }
 
-    answerDeActive(){
-        this.shadowRoot.querySelector("#answer").style.height = "0px";
-        this.shadowRoot.querySelector("#menu > .arrow").src = "https://img.icons8.com/small/32/ffffff/right.png";
-        this.shadowRoot.querySelector("#menu").style.backgroundColor = "#96A7CD"
+    clickToggle(){
+            var x = this.shadowRoot.querySelector("#answer");
+            if (x.style.display !== "block") {
+                this.shadowRoot.querySelector("#answer").style.display= "block";
+                this.shadowRoot.querySelector("#answer").style.opacity= "1";
+                this.shadowRoot.querySelector("#menu").style.backgroundColor = "#382D72";
+                this.shadowRoot.querySelector("#menu > .arrow").src= "https://img.icons8.com/small/32/ffffff/down.png";
+            } else {
+                this.shadowRoot.querySelector("#answer").style.display= "none";
+                this.shadowRoot.querySelector("#menu").style.backgroundColor = "#96a6cd";
+                this.shadowRoot.querySelector("#menu > .arrow").src= "https://img.icons8.com/small/32/ffffff/right.png";
+            }
     }
 
 }
