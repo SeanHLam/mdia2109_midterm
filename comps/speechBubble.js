@@ -37,6 +37,7 @@ class TheStatItem extends HTMLElement {
             }
           if(this.getAttribute("speech4")){
               this.shadowRoot.querySelector("#image").src="./imgs/speech4.svg"
+              document.querySelector("#statInfo_4").onclick = () => this.pageFour();
             }
         }
     
@@ -45,6 +46,11 @@ class TheStatItem extends HTMLElement {
     showSpeech(){
         document.getElementById('hidden').style.display = "block";
      }
+
+     pageFour(){
+       document.querySelector("#page_4").style.display= "block";
+     }
+
 }
 
 //MUST HAVE - define the tag for the custom elements

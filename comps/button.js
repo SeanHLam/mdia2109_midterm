@@ -11,11 +11,13 @@ template_button.innerHTML = `
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content:center;
     background-color: #7055A9;
     width:  240px;
     height: 60px ; 
     border-radius: 10px;
     box-shadow: 0 3px 8px;
+
 }
 
 #cont:hover{
@@ -61,21 +63,23 @@ class TheButton extends HTMLElement {
         if(this.getAttribute("overlay")){
             this.shadowRoot.querySelector("#cont").onclick = () => this.overlay()
         }
-
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 
     scrollTo(){
-        document.querySelector("#hugImage").scrollIntoView({behavior: "smooth"});
-      
+        document.querySelector("#page_2").scrollIntoView({behavior: "smooth"});
     }
 
     overlay(){
-        document.querySelector("#overlay").style.cssText = `display:block; opacity:1;`
-        document.querySelector("#checkCont").style.cssText = `display:block; opacity:1`
+        document.querySelector("#overlay").style.cssText = `display:block; opacity:1; transition: all 1s;`
+        document.querySelector("#checkCont").style.cssText = `display:block; opacity:1; transition: all 1s;`
     }
-
+    
+    pageTwo(){
+        document.querySelector("#page_2").style.display = "block";
+        document.querySelector("#page_3").style.display = "block";
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements

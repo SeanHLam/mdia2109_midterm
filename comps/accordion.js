@@ -8,8 +8,10 @@ template_accord.innerHTML = `
 
     #container {
         position:relative;
-        margin-bottom: 20px;
         width: 20em;
+        display:block;
+        margin:auto;
+        margin-bottom: 20px;
     }
 
     #menu {

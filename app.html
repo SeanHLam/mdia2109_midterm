@@ -32,23 +32,25 @@
 
   <!--Page 1-->
   <div class="personality_question">
-    <img class="background" src="imgs/background_img.png" alt="sea and island">
+    <img class="background" id="background" src="imgs/background_img.png" alt="sea and island">
     <the-heading head_text="What type of personality do you have?"></the-heading>
-    <the-button scroll="yes" butt_text="Introvert"></the-button>
-    <the-button scroll="yes" butt_text="Extrovert"></the-button>
-    <the-button scroll="yes" butt_text="Ambivert"></the-button>
+    <the-button onclick="pageTwo();scrollTo()" scroll="yes" butt_text="Introvert"></the-button>
+    <the-button onclick="pageTwo();scrollTo()" scroll="yes" butt_text="Extrovert"></the-button>
+    <the-button onclick="pageTwo();scrollTo()" scroll="yes" butt_text="Ambivert"></the-button>
   </div>
 
 
   <!--Page 2-->
+  <div id="page_2">
   <div class="block"></div>
   <the-image id="hugImage"></the-image>
   <the-heading head_text="No matter what you are, we can all struggle with our mental health"></the-heading>
   <div class="block"></div>
+</div>
 
 
   <!--Page 3-->
-
+<div id="page_3">
   <!--Stat1-->
   <the-para para_text="Click on the head for more information">
   </the-para>
@@ -67,14 +69,14 @@
     <the-icon class="statItem" head3="yes"></the-icon>
   </div>
   <!--Stat4-->
-  <div class="statInfo">
+  <div class="statInfo" id="statInfo_4">
     <the-icon class="statItem" head4="yes"></the-icon>
     <the-statitem id='stat4' class="statItem" speech4="yes"></the-statitem>
   </div>
-
+</div>
 
   <!--Page 4-->
-
+<div id="page_4">
   <!--Checklist-->
   <the-heading margin="small" head_text="Media & mental health"></the-heading>
   <the-para
@@ -107,7 +109,7 @@
   <the-accord img="imgs/accordionIcon/004-solution.png" question="The largest demographic"
     answer="If you're in the age range of 15 - 24, you are more likely to deal with a mental illness."></the-accord>
   <div class="block"></div>
-
+</div>
 </body>
 
 </html>

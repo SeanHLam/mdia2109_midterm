@@ -1,26 +1,20 @@
-html{
-    overflow-x: hidden;
-}
-
 body{
     max-width: 100%;
     overflow-x: hidden;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Patrick Hand';
     background: #F4E9EA;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,246,246,1) 35%, rgba(244,233,234,1) 45%, rgba(244,233,234,1) 100%);
-    /*background-image: linear-gradient(#f4e9ea, #C497BF 30%,);*/
+    background: linear-gradient(180deg, rgba(255,234,235) 0%,  rgba(255,234,235) 10%, rgba(255,255,255) 50%,  rgba(244,233,234,1) 65%, rgba(244,233,234,1) 100%);
 }
 
 img {
     position:absolute;
     left:0px;
     top:0px;
-    z-index:-1;
     opacity: 40%;
+    z-index:-1;
 }
 
 .block{
@@ -67,16 +61,14 @@ the-image {
 
 #checkCont{
     display: none;
+    position: relative;
     background-color: #382D72;
-    position: fixed;
-    
-    margin-top: 10%;
     width: 21em; 
     padding: 1em 0 1em 0;
     border-radius: 20px;
     z-index: 10;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: all 0.5s;
 }
 
 .statInfo {
@@ -102,4 +94,11 @@ the-image {
 
 #stat1,#stat2,#stat3,#stat4{
     visibility: hidden;
+}
+
+
+/* Page restriction */
+
+#page_2, #page_3, #page_4 {
+    display:none;
 }
