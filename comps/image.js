@@ -3,41 +3,13 @@ var template_image = document.createElement("template"); //<template> </template
 
 //To-do - CREATE THE UI HERE!
 template_image.innerHTML = `
-
 <style>
-img {
-    animation: float 2s infinite, fadeIn 3s linear;
-    position:relative;
-    }
-
-
-@keyframes float{
-0% {
-    transform: translatey(0px);
+#hug {
+    display:block;
+    margin:auto;
 }
-50% {
-    transform: translatey(-20px);
-    -webkit-animation-timing-function: ease-in;
-}
-100% {
-    transform:translatey(0px);
-    -webkit-animation-timing-function: ease-out;
-}
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-  
 </style>
-
-    <img class="fade" src="./imgs/hug.svg" alt="two people hugging">
+    <img id="hug" src="./imgs/hug.svg" alt="two people hugging">
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -58,8 +30,6 @@ class TheImage extends HTMLElement {
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-
-
 }
 
 //MUST HAVE - define the tag for the custom elements

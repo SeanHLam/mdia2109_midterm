@@ -37,14 +37,26 @@ class TheStatItem extends HTMLElement {
             }
           if(this.getAttribute("speech4")){
               this.shadowRoot.querySelector("#image").src="./imgs/speech4.svg"
+              document.querySelector("#statInfo_4").onclick = () => this.pageFour();
             }
         }
     
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+
+    showSpeech(){
+        document.getElementById('hidden').style.display = "block";
+     }
+
+     pageFour(){
+       document.querySelector("#page_4").style.display= "block";
+     }
+
+
     // showSpeech(){
     //     document.getElementById('hidden').style.display = "block";
     //  }
+
 }
 
 //MUST HAVE - define the tag for the custom elements
