@@ -13,6 +13,9 @@
   <script src="comps/speechBubble.js"></script>
   <script src="comps/headIcon.js"></script>
   <script src="comps/paragraph.js"></script>
+  <!-- <script src="comps/arrow.js"></script> -->
+
+  
   <link rel="stylesheet" href="CSS/main.css">
 
   <!--FONTS-->
@@ -25,6 +28,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+
+  <!--FontAwesome Kit-->
+  <script src="https://kit.fontawesome.com/a61a1c5a90.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -54,22 +60,30 @@
   </the-para>
   <div class="statInfo">
     <the-statitem id='stat1' class="statItem" speech1="yes"></the-statitem>
+    <!-- <i class="fa-solid fa-arrow-right-long fa-2x fa-beat-fade"></i> -->
+    <the-arrow id="arrow1"></the-arrow>
     <the-icon class="statItem" head1="yes"></the-icon>
   </div>
+  
   <!--Stat2-->
   <div class="statInfo">
     <the-icon class="statItem" head2="yes"></the-icon>
     <the-statitem id='stat2' class="statItem" speech2="yes"></the-statitem>
+    <the-arrow arrow_direction="imgs/left-arrow.png" id="arrow2"></the-arrow>
+    
   </div>
   <!--Stat3-->
   <div class="statInfo">
     <the-statitem id='stat3' class="statItem" speech3="yes"></the-statitem>
+    <the-arrow id="arrow3"></the-arrow>
     <the-icon class="statItem" head3="yes"></the-icon>
   </div>
+
   <!--Stat4-->
   <div class="statInfo">
     <the-icon class="statItem" head4="yes"></the-icon>
     <the-statitem id='stat4' class="statItem" speech4="yes"></the-statitem>
+    <the-arrow arrow_direction="imgs/left-arrow.png" id="arrow4"></the-arrow>
   </div>
 
 
@@ -107,6 +121,8 @@
   <the-accord img="imgs/accordionIcon/004-solution.png" question="The largest demographic"
     answer="If you're in the age range of 15 - 24, you are more likely to deal with a mental illness."></the-accord>
   <div class="block"></div>
+
+
 
 </body>
 

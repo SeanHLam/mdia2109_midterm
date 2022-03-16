@@ -42,9 +42,9 @@ class TheStatItem extends HTMLElement {
     
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    showSpeech(){
-        document.getElementById('hidden').style.display = "block";
-     }
+    // showSpeech(){
+    //     document.getElementById('hidden').style.display = "block";
+    //  }
 }
 
 //MUST HAVE - define the tag for the custom elements
