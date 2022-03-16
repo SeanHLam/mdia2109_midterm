@@ -6,13 +6,13 @@ body{
     align-items: center;
     font-family: 'Patrick Hand';
     background: #F4E9EA;
-    background: linear-gradient(180deg, rgba(255,234,235) 0%,  rgba(255,234,235) 10%, rgba(255,255,255) 50%,  rgba(244,233,234,1) 65%, rgba(244,233,234,1) 100%);
+    background: linear-gradient(180deg, rgba(255,234,235) 0%, rgba(255,234,235) 15%,  rgba(255,234,235) 20%, rgba(255,255,255) 40%,  rgba(244,233,234,1) 60%, rgba(244,233,234,1) 100%);
 }
 
 img {
     position:absolute;
     left:0px;
-    top:0px;
+    top:-100px;
     opacity: 40%;
     z-index:-1;
 }

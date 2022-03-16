@@ -68,7 +68,7 @@ class TheButton extends HTMLElement {
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 
     scrollTo(){
-        document.querySelector("#page_2").scrollIntoView({behavior: "smooth"});
+        document.querySelector("#page_2").scrollIntoView({behavior: "smooth", block:"center", inline:"center"});
     }
 
     overlay(){
