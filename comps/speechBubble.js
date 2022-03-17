@@ -53,9 +53,7 @@ class TheStatItem extends HTMLElement {
      }
 
 
-    // showSpeech(){
-    //     document.getElementById('hidden').style.display = "block";
-    //  }
+    
 
 }
 

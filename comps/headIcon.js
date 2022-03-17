@@ -20,6 +20,11 @@ template_icon.innerHTML = `
     left: 1em;
   }
 
+  #arrow{
+    opacity: 1;
+    transition: opacity .5s;
+  }
+
   @keyframes MoveUpDown {
     0% {
       bottom: 10px;
@@ -29,6 +34,7 @@ template_icon.innerHTML = `
       bottom: 0px;
     }
     
+  
 
 </style>
 
@@ -70,6 +76,7 @@ class TheIcon extends HTMLElement {
         
         
         this.shadowRoot.querySelector("#icon").onclick = () => this.appear()
+        //this.shadowRoot.querySelector("#icon").onclick = () => this.disappear()
 
 
     
@@ -77,43 +84,40 @@ class TheIcon extends HTMLElement {
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     appear(){
+      var arrow = this.shadowRoot.querySelector("#arrow");
       if(this.getAttribute("head1")){
         setTimeout(function() { document.querySelector("#stat1").style.cssText += `opacity:1;`}, 100);
         document.querySelector("#stat1").style.visibility = "visible";
+
+        setTimeout(function() { arrow.style.cssText += `opacity:0;`}, 1);
+        setTimeout(function() { arrow.style.cssText += `visibility:hidden;`}, 500);
       }
       if(this.getAttribute("head2")){
         setTimeout(function() { document.querySelector("#stat2").style.cssText += `opacity:1;`}, 100);
         document.querySelector("#stat2").style.visibility = "visible";
+
+        setTimeout(function() { arrow.style.cssText += `opacity:0;`}, 1);
+        setTimeout(function() { arrow.style.cssText += `visibility:hidden;`}, 500);
       }
       if(this.getAttribute("head3")){
         setTimeout(function() { document.querySelector("#stat3").style.cssText += `opacity:1;`}, 100);
         document.querySelector("#stat3").style.visibility = "visible";
+
+        setTimeout(function() { arrow.style.cssText += `opacity:0;`}, 1);
+        setTimeout(function() { arrow.style.cssText += `visibility:hidden;`}, 500);
       }
       if(this.getAttribute("head4")){
         setTimeout(function() { document.querySelector("#stat4").style.cssText += `opacity:1;`}, 100);
         document.querySelector("#stat4").style.visibility = "visible";
+
+        setTimeout(function() { arrow.style.cssText += `opacity:0;`}, 1);
+        setTimeout(function() { arrow.style.cssText += `visibility:hidden;`}, 500);
+      
       }
       
       
-      //document.querySelector(".statItem").style.display = "block";
+      
     
-  }
-
-  disappear(){
-    if(this.getAttribute("head1")){
-      document.getElementById("#arrow1").style.visibility = "hidden";
-    }
-    if(this.getAttribute("head2")){
-      document.getElementById("#arrow2").style.visibility = "hidden";
-    }
-    if(this.getAttribute("head3")){
-      document.getElementById("#arrow3").style.visibility = "hidden";
-    }
-    if(this.getAttribute("head4")){
-      document.getElementById("#arrow4").style.visibility = "hidden";
-    }
-
-
   }
 
 

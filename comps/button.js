@@ -83,7 +83,7 @@ class TheButton extends HTMLElement {
         
         document.querySelector("#overlay").style.cssText += `display:block;`
         setTimeout(function() { document.querySelector("#overlay").style.cssText += `display:block; opacity:1;` }, 100);
-        //document.querySelector("body").style.cssText = `height: 100vh;  overflow-y: hidden;`
+        
     }
     
     pageTwo(){
