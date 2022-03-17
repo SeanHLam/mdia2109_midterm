@@ -49,7 +49,7 @@ class TheStatItem extends HTMLElement {
      }
 
      pageFour(){
-       document.querySelector("#page_4").style.display= "block";
+       document.querySelector("#page_4").style.display= "flex";
      }
 
 

@@ -25,7 +25,7 @@ template_accord.innerHTML = `
         display:flex;
         flex-direction:row;
         align-items:center;
-        z-index:100;
+        z-index:8;
         transition: 0.5s;
     }
 
@@ -52,11 +52,12 @@ template_accord.innerHTML = `
         border-bottom-right-radius:25px;
         border-bottom-left-radius:25px;
         color:white;
-        padding: 20px;
         z-index:0;
-        padding-top:33px;
+        padding:33px 20px 20px 20px;
         top:-22px;
+        height:0;
         opacity: 0;
+        transition: opacity .5s, height 1s;
     }
 
     #answer > .answer {
@@ -111,14 +112,19 @@ class TheAccord extends HTMLElement {
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 
     clickToggle(){
+        
             var x = this.shadowRoot.querySelector("#answer");
             if (x.style.display !== "block") {
+                setTimeout(function() { x.style.cssText += `height:55px; opacity:1;`}, 1);
+                x.style.cssText += `padding:33px 20px 20px 20px;`
                 this.shadowRoot.querySelector("#answer").style.display= "block";
-                this.shadowRoot.querySelector("#answer").style.opacity= "1";
                 this.shadowRoot.querySelector("#menu").style.backgroundColor = "#382D72";
                 this.shadowRoot.querySelector("#menu > .arrow").src= "https://img.icons8.com/small/32/ffffff/down.png";
             } else {
-                this.shadowRoot.querySelector("#answer").style.display= "none";
+                setTimeout(function() { x.style.cssText += `height:0px; opacity:0;  `}, 1);
+                setTimeout(function() { x.style.cssText += `padding:0px 20px 0px 20px; `}, 1);
+                setTimeout(function() { x.style.cssText += `display:none; `}, 900);
+                //this.shadowRoot.querySelector("#answer").style.display= "none";
                 this.shadowRoot.querySelector("#menu").style.backgroundColor = "#96a6cd";
                 this.shadowRoot.querySelector("#menu > .arrow").src= "https://img.icons8.com/small/32/ffffff/right.png";
             }
