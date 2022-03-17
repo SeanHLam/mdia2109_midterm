@@ -28,8 +28,7 @@ template_check.innerHTML = `
     min-height: 42px;
     max-width:  42px;
     max-height: 42px;
-    background-color: #7056A9;
-    border-radius: 10px;
+
     
 }
 
@@ -46,11 +45,12 @@ template_check.innerHTML = `
     font-family: 'DM Sans', sans-serif;
 }
 </style>
-    
+
+
 <div id="cont">
     <div id="box">
-        <div id="check"> 
-        </div>
+        <img id="check" src="./imgs/check.svg"> 
+
     </div>
 
     <div id="checkText">
