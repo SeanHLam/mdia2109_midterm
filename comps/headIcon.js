@@ -78,15 +78,19 @@ class TheIcon extends HTMLElement {
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     appear(){
       if(this.getAttribute("head1")){
+        setTimeout(function() { document.querySelector("#stat1").style.cssText += `opacity:1;`}, 100);
         document.querySelector("#stat1").style.visibility = "visible";
       }
       if(this.getAttribute("head2")){
+        setTimeout(function() { document.querySelector("#stat2").style.cssText += `opacity:1;`}, 100);
         document.querySelector("#stat2").style.visibility = "visible";
       }
       if(this.getAttribute("head3")){
+        setTimeout(function() { document.querySelector("#stat3").style.cssText += `opacity:1;`}, 100);
         document.querySelector("#stat3").style.visibility = "visible";
       }
       if(this.getAttribute("head4")){
+        setTimeout(function() { document.querySelector("#stat4").style.cssText += `opacity:1;`}, 100);
         document.querySelector("#stat4").style.visibility = "visible";
       }
       

@@ -58,10 +58,16 @@ class TheButton extends HTMLElement {
 
         if(this.getAttribute("scroll")){
             this.shadowRoot.querySelector("#cont").onclick = () => this.scrollTo()
+            
         }
         
         if(this.getAttribute("overlay")){
             this.shadowRoot.querySelector("#cont").onclick = () => this.overlay()
+            //var delay = this.shadowRoot.querySelector("#cont").onclick = () => this.overlay()
+            
+            
+            //setTimeout(this.shadowRoot.querySelector("#cont").onclick = () => this.overlay(), 1000)
+
         }
     }
 
@@ -72,8 +78,12 @@ class TheButton extends HTMLElement {
     }
 
     overlay(){
-        document.querySelector("#overlay").style.cssText = `display:block; opacity:1; transition: all 1s;`
-        document.querySelector("#checkCont").style.cssText = `display:block; opacity:1; transition: all 1s;`
+        document.querySelector("#checkCont").style.cssText += `display:block;` 
+        setTimeout(function() { document.querySelector("#checkCont").style.cssText += `opacity:1;` }, 100);
+        
+        document.querySelector("#overlay").style.cssText += `display:block;`
+        setTimeout(function() { document.querySelector("#overlay").style.cssText += `display:block; opacity:1;` }, 100);
+        //document.querySelector("body").style.cssText = `height: 100vh;  overflow-y: hidden;`
     }
     
     pageTwo(){

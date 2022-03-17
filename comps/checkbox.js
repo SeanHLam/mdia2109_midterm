@@ -100,8 +100,11 @@ class TheCheck extends HTMLElement {
     }
 
     closeOverlay(){
-        document.querySelector("#overlay").style.display = "none";
-        document.querySelector("#checkCont").style.display = "none";
+        setTimeout(function() { document.querySelector("#checkCont").style.cssText += `opacity:0;`}, 100);
+        setTimeout(function() { document.querySelector("#overlay").style.cssText += `opacity:0;` }, 50);
+
+        setTimeout(function() { document.querySelector("#checkCont").style.cssText += `display:none;`}, 1000);
+        setTimeout(function() { document.querySelector("#overlay").style.cssText += `display:none;` }, 1000);
     }
 }
 
